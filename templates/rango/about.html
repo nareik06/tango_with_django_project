@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
+{% block title_block %}
+	About
+{% endblock %}
 
-<html>
+	{% block body_block %}
 
-    <head>
-        <title>About</title>
-    </head>
-
-    <body>
         <h1>This tutorial has been put together by Kieran Swedlund</h1>
         <div>
             
@@ -16,7 +13,6 @@
             <strong>{{ boldmessage }} </strong><br />
 		</div>
 		<div>
-			<a href="/rango/">Index</a><br />
 			<img src="{% static "images/rain.jpg" %}"
 				alt="Picture of rain" />
 
@@ -26,6 +22,4 @@
 			<h1> A CAT! </h1>
 			<img src="{{ MEDIA_URL}}cat.jpg" />
 		</div>
-	</body>
-
-</html>
+{% endblock %}
